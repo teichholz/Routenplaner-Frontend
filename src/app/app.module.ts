@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,10 @@ import { MapComponent } from './map/map.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyDVHXP_xGDejmHBZSZFYjgbpnQso25hnYY"
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
