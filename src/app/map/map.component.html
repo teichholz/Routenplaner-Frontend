@@ -1,18 +1,5 @@
-<html>
-
-<head>
-
-</head>
-
-<body>
-
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <h5>{{url}}</h5>
-    <agm-map [latitude]="coord.lat" [longitude]="coord.lng">
-        <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng">
-        </agm-marker>
-    </agm-map>
-</body>
-
-</html>
+<h3>My Google Maps Demo</h3>
+<agm-map *ngIf="location" [latitude]="location.latitude" [longitude]="location.longitude">
+  <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng">
+  </agm-marker>
+</agm-map>
